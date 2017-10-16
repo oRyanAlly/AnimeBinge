@@ -1,15 +1,6 @@
-/*
- * Programmer: Ryan Ally
- * Course: PROG3210
- * Student ID: 7260565
- * Assignment 1: AnimeBinge
- */
-
-
 package com.animebinge.rally0565.animebinge;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -30,46 +21,38 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        //Define all Widgets
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
         etEmail = (EditText) findViewById(R.id.txtEmail);
         etPassword = (EditText) findViewById(R.id.txtPassword);
         tvForgotPassword = (TextView) findViewById(R.id.tvResetPassword);
 
-        //Attached Listeners to Specified Buttons
         btnLogin.setOnClickListener(this);
         btnSignUp.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v) {
-                //When Sign Up is clicked, hide some of the widgets
-                //Rename one, then eprform validation(for now)
-                //Then return back to home screen
-                        btnLogin.setVisibility(View.GONE);
-                        tvForgotPassword.setVisibility(View.GONE);
-                        btnSignUp.setText("CREATE ACCOUNT");
-                        String sPassword = etPassword.getText().toString();
-                        String sEmail = etEmail.getText().toString();
+                btnLogin.setVisibility(View.GONE);
+                tvForgotPassword.setVisibility(View.GONE);
+                String sPassword = etPassword.getText().toString().trim();
 
-                        if (!isValidEmail(sEmail) || sPassword == null) {
-                            etEmail.setError("Please enter a valid email address");
-                        }
-                        if (sPassword.length() < 8 || sPassword == null) {
-                            etPassword.setError("Please enter a password greater than 8 characters");
-                        }
-                        if (etEmail.getError() == null && etPassword.getError() == null) {
-                            btnLogin.setVisibility(View.VISIBLE);
-                            tvForgotPassword.setVisibility(View.VISIBLE);
-                            btnSignUp.setText("SIGN UP");
-                            etEmail.setText("");
-                            etPassword.setText("");
-                        }
+                if(!isValidEmail(etEmail.getText())) {
+                    etEmail.setError("Please enter a valid email address");
+                }
+                if(sPassword.length() < 8) {
+                    etPassword.setError("Please enter a password greater than 8 characters");
+                }
+                if(etEmail.getError() == null || etPassword.getError() == null) {
+                    btnLogin.setVisibility(View.VISIBLE);
+                    tvForgotPassword.setVisibility(View.VISIBLE);
+                    etEmail.setText("");
+                    etPassword.setText("");
+                }
+
             }
         });
-        //Just send the user to the Reset Password page, if the text is clicked.
         tvForgotPassword.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Intent iResetPassword = new Intent(LoginScreen.this, ResetPassword.class);
-                startActivity(iResetPassword);
+                Intent iForgotPassword = new Intent(LoginScreen.this, ResetPassword.class);
+                startActivity(iForgotPassword);
             }
         });
     }
@@ -80,15 +63,11 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         String sPassword = etPassword.getText().toString().trim();
-        if (!isValidEmail(etEmail.getText()) || etEmail.getText() == null) {
+        if (!isValidEmail(etEmail.getText())) {
             etEmail.setError("Invalid E-mail");
         }
-        if(sPassword.length() < 8 || etPassword.getText() == null) {
+        if(sPassword.length() < 8) {
             etPassword.setError("Invalid Password");
-        }
-        if (etEmail.getError() == null && etPassword.getError() == null) {
-            Intent iHomePage = new Intent(this, HomePage.class);
-            startActivity(iHomePage);
         }
     }
 
