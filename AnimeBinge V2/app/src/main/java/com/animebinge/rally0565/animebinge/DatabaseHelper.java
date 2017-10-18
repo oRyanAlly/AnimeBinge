@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
 
 /**
  * Created by Ryan on 2017-09-25.
@@ -36,6 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + tableName);
         onCreate(db);
     }
 
@@ -46,7 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(col4, password);
 
         long result = db.insert(tableName, null, contentValues);
-
+        db.close();
         //If data is not inserted, it will return -1
         if(result == -1) {
             return false;
@@ -55,10 +57,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
     public Cursor getMember(String email) {
-        SQLiteDatabase db= this.getWritableDatabase();
+        SQLiteDatabase db= this.getReadableDatabase();
          String query = "SELECT * FROM " + tableName +
         " WHERE " + col3  + " = '" + email + "'";
         Cursor data = db.rawQuery(query, null);
+        if(data != null) {
+            data.moveToFirst();
+        }
         return data;
     }
 }

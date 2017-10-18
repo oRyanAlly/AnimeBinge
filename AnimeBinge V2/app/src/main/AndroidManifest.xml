@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ResetPassword" />
-        <activity android:name=".HomePage"></activity>
+        <activity
+            android:name=".HomePage"
+            android:theme="@style/OverFlowMenu"/>
     </application>
 
 </manifest>

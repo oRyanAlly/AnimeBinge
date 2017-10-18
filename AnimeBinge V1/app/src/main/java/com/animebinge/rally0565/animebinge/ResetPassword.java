@@ -1,3 +1,10 @@
+/*
+ * Programmer: Ryan Ally
+ * Course: PROG3210
+ * Student ID: 7260565
+ * Assignment 1: AnimeBinge
+ */
+
 package com.animebinge.rally0565.animebinge;
 
 import android.support.v7.app.AppCompatActivity;

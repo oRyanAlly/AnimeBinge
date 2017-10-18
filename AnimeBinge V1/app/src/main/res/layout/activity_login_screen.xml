@@ -64,7 +64,7 @@
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnLogin"
