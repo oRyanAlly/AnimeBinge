@@ -23,6 +23,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     private TextView tvForgotPassword;
     private String storedEmail;
     DatabaseHelper dhDatabaseHelper;
+    SQLiteDatabase animeDB;
 
 
     @Override
@@ -66,6 +67,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                         etEmail.setText("");
                         etPassword.setText("");
                         addEmailandPass(sEmail, sPassword);
+
                     }
                 }
                 else {

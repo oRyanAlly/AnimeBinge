@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="?attr/colorPrimary"
+
         android:minHeight="?attr/actionBarSize"/>
 
     <ImageView
@@ -24,4 +24,16 @@
         app:srcCompat="@drawable/animebinge"
         android:layout_alignBottom="@+id/tbMenu"
         android:layout_centerHorizontal="true" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tbMenu"
+        android:id="@+id/gvAnime"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:numColumns="auto_fit"
+        android:clickable="true"/>
+
 </android.widget.RelativeLayout>
