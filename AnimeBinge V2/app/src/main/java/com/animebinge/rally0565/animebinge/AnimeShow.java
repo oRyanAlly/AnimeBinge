@@ -7,15 +7,19 @@ package com.animebinge.rally0565.animebinge;
 public class AnimeShow {
     private int id;
     private byte[] image;
-    private String name;
-
-    public AnimeShow(int id, byte[] image) {
-        this.id = id;
-        this.image = image;
-    }
+    private String sName;
 
     public AnimeShow() {
 
+    }
+    public AnimeShow(int id, String name, byte[] image) {
+        this.id = id;
+        this.sName = name;
+        this.image = image;
+    }
+    public AnimeShow(String name, byte[] image) {
+        this.sName = name;
+        this.image = image;
     }
     public int getId() {
         return id;
@@ -34,10 +38,10 @@ public class AnimeShow {
     }
 
     public String getName() {
-        return name;
+        return sName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.sName = name;
     }
 }

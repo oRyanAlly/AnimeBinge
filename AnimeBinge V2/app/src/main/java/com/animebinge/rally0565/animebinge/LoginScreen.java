@@ -36,8 +36,9 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         etEmail = (EditText) findViewById(R.id.txtEmail);
         etPassword = (EditText) findViewById(R.id.txtPassword);
         tvForgotPassword = (TextView) findViewById(R.id.tvResetPassword);
+        this.deleteDatabase("Anime.db");
         dhDatabaseHelper = new DatabaseHelper(this);
-
+        dhDatabaseHelper.getWritableDatabase();
         //Attached Listeners to Specified Buttons
         btnLogin.setOnClickListener(this);
         btnSignUp.setOnClickListener(new Button.OnClickListener() {

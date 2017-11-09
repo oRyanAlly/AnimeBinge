@@ -15,39 +15,24 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayInputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by Ryan on 2017-10-18.
  */
 
-public class AnimeListAdapter extends BaseAdapter {
+public class AnimeListAdapter extends ArrayAdapter<AnimeShow> {
     private Context context;
-    private String[] animeNames;
-    private int[] imageId;
+    private int resoureID;
+    private ArrayList<AnimeShow> arAnime = new ArrayList<AnimeShow>();
 
-    public AnimeListAdapter(Context context, String[] animeNames, int[] imageId) {
+    public AnimeListAdapter(Context context, int resoureID, ArrayList<AnimeShow> anime) {
+        super(context, resoureID, anime);
         this.context = context;
-        this.animeNames = animeNames;
-        this.imageId = imageId;
-    }
-
-    @Override
-    public int getCount() {
-
-        return animeNames.length;
-    }
-
-    @Override
-    public Object getItem(int position) {
-
-        return position;
-    }
-
-    @Override
-    public long getItemId(int position)
-    {
-        return position;
+        this.resoureID = resoureID;
+        this.arAnime = anime;
     }
 
     private class ViewHolder {
@@ -60,8 +45,8 @@ public class AnimeListAdapter extends BaseAdapter {
 
         View row = convertView;
         ViewHolder holder = new ViewHolder();
-
         if(row == null) {
+
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(R.layout.griditem_layout, null);
 
@@ -72,9 +57,13 @@ public class AnimeListAdapter extends BaseAdapter {
         else {
             holder = (ViewHolder) row.getTag();
         }
-        holder.txtName.setText(animeNames[position]);
-        holder.imgAnime.setImageResource(imageId[position]);
-
+        //http://www.androidhub4you.com/2012/09/hello-friends-today-i-am-going-to-share.html
+        AnimeShow animeShow = arAnime.get(position);
+        holder.txtName.setText(animeShow.getName());
+        byte[] bImage = animeShow.getImage();
+        ByteArrayInputStream bImageStream = new ByteArrayInputStream(bImage);
+        Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
+        holder.imgAnime.setImageBitmap(bmImage);
         return row;
     }
 }

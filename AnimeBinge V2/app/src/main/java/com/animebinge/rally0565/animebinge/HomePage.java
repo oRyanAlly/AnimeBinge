@@ -5,24 +5,34 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 import android.view.animation.GridLayoutAnimationController;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.System.in;
 
 public class HomePage extends AppCompatActivity {
 
     DatabaseHelper databaseHelper;
     GridView gvAnime;
-    ArrayList<AnimeShow> animeShows;
+
+    public static ArrayList<AnimeShow> animeShows;
+    public static ArrayList<AnimeShow> animes;
     public static String[] animeNames = {
             "Akame Ga Kill",
             "Another",
@@ -50,27 +60,32 @@ public class HomePage extends AppCompatActivity {
 
     //https://www.androidtutorialpoint.com/material-design/
     // android-custom-gridview-example-image-text/#Android_GridView_Custom_Adapter
+    // Grab to see if any anime shows are in the database, if it is empty, add the shows in.
+    // Re-grab to update the array then display the anime shows in the adapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
         databaseHelper = new DatabaseHelper(this);
-        Cursor anime;
-        anime = databaseHelper.getAnime(animeNames[0]);
+        animeShows = databaseHelper.getAnimes();
 
-        if(anime.getCount() == 0 ) {
+        if(animeShows.isEmpty()) {
             addAnime();
+            animeShows = databaseHelper.getAnimes();
         }
         Toolbar tbMenu = (Toolbar) findViewById(R.id.tbMenu);
         setSupportActionBar(tbMenu);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         gvAnime = (GridView) findViewById(R.id.gvAnime);
-        gvAnime.setAdapter(new AnimeListAdapter(this, animeNames, animeImages));
 
-        tbMenu.setBackgroundColor(Color.parseColor("#141414"));
+        gvAnime.setAdapter(new AnimeListAdapter(this, R.layout.griditem_layout, animeShows));
+        gvAnime.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,6 +94,8 @@ public class HomePage extends AppCompatActivity {
         return true;
     }
 
+    // Decrypt each image in the array into a bitmap then cover it into a byte to be stored
+    //in the database
     private void addAnime() {
         //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-from-sql-lite-database-in-android
         //https://stackoverflow.com/questions/15255611/how-to-convert-a-drawable-image-from-resources-to-a-bitmap
