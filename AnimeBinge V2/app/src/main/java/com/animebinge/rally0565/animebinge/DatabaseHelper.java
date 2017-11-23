@@ -121,7 +121,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 animeShow.setId(id);
                 animeShow.setImage(image);
                 animeShow.setName(name);
-
                 animes.add(animeShow);
             }
         }
