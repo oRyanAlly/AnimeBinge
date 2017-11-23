@@ -82,11 +82,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return data;
     }
-    public Cursor getAnime(String name) {
+    public Cursor getAnime(int id) {
         try {
             SQLiteDatabase db = this.getReadableDatabase();
             String query = "SELECT * FROM " + animeTable +
-                    " WHERE name = '" + name + "'";
+                    " WHERE ID = '" + id + "'";
             Cursor data = db.rawQuery(query, null);
             if (data != null) {
                 data.moveToFirst();

@@ -1,6 +1,7 @@
 package com.animebinge.rally0565.animebinge;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -83,6 +84,9 @@ public class HomePage extends AppCompatActivity {
         gvAnime.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent iClickedAnime = new Intent(HomePage.this, AnimePage.class);
+                iClickedAnime.putExtra("position", position);
+                startActivity(iClickedAnime);
 
             }
         });
