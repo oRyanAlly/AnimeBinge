@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
          String query = "SELECT * FROM " + tableName +
         " WHERE " + col3  + " = '" + email + "'";
-        Cursor data = db.rawQuery(query, null);
+        Cursor data = db.rawQuery(query,  null);
         if(data != null) {
             data.moveToFirst();
         }
