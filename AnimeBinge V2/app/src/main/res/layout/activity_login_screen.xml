@@ -45,6 +45,7 @@
         android:layout_below="@+id/imgAnime"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
+        android:focusable="auto"
         android:fontFamily="sans-serif"
         android:hint="E-mail"
         android:inputType="textEmailAddress"

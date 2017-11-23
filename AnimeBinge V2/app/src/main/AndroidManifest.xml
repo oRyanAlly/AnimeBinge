@@ -20,6 +20,7 @@
         <activity
             android:name=".HomePage"
             android:theme="@style/OverFlowMenu"/>
+        <activity android:name=".AnimePage"/>
     </application>
 
 </manifest>
