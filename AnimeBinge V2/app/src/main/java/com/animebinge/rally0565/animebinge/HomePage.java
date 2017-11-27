@@ -35,7 +35,7 @@ public class HomePage extends AppCompatActivity {
     public static ArrayList<AnimeShow> animeShows;
     public static ArrayList<AnimeShow> animes;
     public static String[] animeNames = {
-            "Akame Ga Kill",
+            "Akame Ga Kill!",
             "Another",
             "Big Order",
             "Black Bullet",
@@ -58,7 +58,78 @@ public class HomePage extends AppCompatActivity {
             R.drawable.tokyoghoul,
             R.drawable.toradora
     };
-
+    public static String[] avgScore = {
+            "3.95/5",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+    public static String[] type = {
+            "TV",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+    public static String[] status = {
+            "COMPLETED",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+    public static String[] eps = {
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+    public static String[] aired = {
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+    public static String[] age = {
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
     //https://www.androidtutorialpoint.com/material-design/
     // android-custom-gridview-example-image-text/#Android_GridView_Custom_Adapter
     // Grab to see if any anime shows are in the database, if it is empty, add the shows in.

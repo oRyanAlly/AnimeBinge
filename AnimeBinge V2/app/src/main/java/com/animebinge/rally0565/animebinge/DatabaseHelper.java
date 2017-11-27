@@ -44,7 +44,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 col4 + " VARCHAR(255)) ";
 
         String createAnimeTbl = "CREATE TABLE " + animeTable + " (ID INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, " + "image BLOB, name VARCHAR)";
+                "AUTOINCREMENT, " + "image BLOB, name VARCHAR, type VARCHAR(255), eps VARCHAR(255)" +
+                ", aired VARCHAR(255), age VARCHAR(255)  )";
         db.execSQL(createMembersTbl);
         db.execSQL(createAnimeTbl);
     }

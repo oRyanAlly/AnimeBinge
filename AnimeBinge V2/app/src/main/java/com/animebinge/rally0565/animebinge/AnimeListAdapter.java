@@ -25,13 +25,13 @@ import java.util.ArrayList;
 
 public class AnimeListAdapter extends ArrayAdapter<AnimeShow> {
     private Context context;
-    private int resoureID;
+    private int resourceID;
     private ArrayList<AnimeShow> arAnime = new ArrayList<AnimeShow>();
 
-    public AnimeListAdapter(Context context, int resoureID, ArrayList<AnimeShow> anime) {
-        super(context, resoureID, anime);
+    public AnimeListAdapter(Context context, int resourceID, ArrayList<AnimeShow> anime) {
+        super(context, resourceID, anime);
         this.context = context;
-        this.resoureID = resoureID;
+        this.resourceID = resourceID;
         this.arAnime = anime;
     }
 

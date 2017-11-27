@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"/>
 
     <ImageView
@@ -21,5 +21,28 @@
         android:layout_alignBottom="@+id/tbMenu"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/animebinge" />
+
+    <ImageView
+        android:id="@+id/selectedAnime"
+        android:layout_width="200dp"
+        android:layout_height="270dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tbMenu"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/toradora" />
+
+    <TextView
+        android:id="@+id/animeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/selectedAnime"
+        android:layout_toEndOf="@+id/selectedAnime"
+        android:layout_toRightOf="@+id/selectedAnime"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textSize="12dp"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF" />
 
 </android.widget.RelativeLayout>
