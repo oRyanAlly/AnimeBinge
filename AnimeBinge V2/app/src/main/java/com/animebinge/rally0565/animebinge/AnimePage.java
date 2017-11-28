@@ -21,7 +21,7 @@ public class AnimePage extends AppCompatActivity {
 
     DatabaseHelper dhHelper;
     ImageView selectedAnime;
-    TextView animeName;
+    TextView animeName, tvAvgScore, tvAnimeType, tvStatus, tvEpisodes, tvAired;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,31 @@ public class AnimePage extends AppCompatActivity {
 
         byte[] image = anime.getBlob(anime.getColumnIndex("image"));
         String sName = anime.getString(anime.getColumnIndex("name"));
+        String sAvgScore = anime.getString(anime.getColumnIndex("avgScore"));
+        String sAnimeType = anime.getString(anime.getColumnIndex("type"));
+        String sAnimeStatus = anime.getString(anime.getColumnIndex("status"));
+        String sEpisodes = anime.getString(anime.getColumnIndex("eps"));
+        String sAired = anime.getString(anime.getColumnIndex("aired"));
+
         animeShow.setImage(image);
         selectedAnime = findViewById(R.id.selectedAnime);
         animeName = findViewById(R.id.animeName);
+        tvAvgScore = findViewById(R.id.tvAvgScore);
+        tvAnimeType = findViewById(R.id.tvAnimeType);
+        tvStatus = findViewById(R.id.tvStatus);
+        tvEpisodes = findViewById(R.id.tvEpisodes);
+        tvAired = findViewById(R.id.tvAired);
+
+
         ByteArrayInputStream bImageStream = new ByteArrayInputStream(image);
         Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
         selectedAnime.setImageBitmap(bmImage);
         animeName.setText(sName);
+        tvAvgScore.setText(sAvgScore);
+        tvAnimeType.setText(sAnimeType);
+        tvStatus.setText(sAnimeStatus);
+        tvEpisodes.setText(sEpisodes);
+        tvAired.setText(sAired);
+
     }
 }
