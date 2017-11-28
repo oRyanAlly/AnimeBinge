@@ -95,7 +95,7 @@ public class HomePage extends AppCompatActivity {
             ""
     };
     public static String[] eps = {
-            "",
+            "24",
             "",
             "",
             "",
@@ -107,7 +107,7 @@ public class HomePage extends AppCompatActivity {
             ""
     };
     public static String[] aired = {
-            "",
+            "JUL 2014 - DEC 2014",
             "",
             "",
             "",
@@ -119,7 +119,7 @@ public class HomePage extends AppCompatActivity {
             ""
     };
     public static String[] age = {
-            "",
+            "R - 17+ (Violence & Profanity)",
             "",
             "",
             "",
@@ -129,6 +129,32 @@ public class HomePage extends AppCompatActivity {
             "",
             "",
             ""
+    };
+    public static String[] animeDesc = {
+            "Night Raid is the covert assassination branch of the Revolutionary Army, an uprising " +
+                    "assembled to overthrow Prime Minister Honest, whose avarice and greed for " +
+                    "power has lead him to take advantage of the child emperor's inexperience. " +
+                    "Without a strong and benevolent leader, the rest of the nation is left to " +
+                    "drown in poverty, strife, and ruin. Though the Night Raid members are all " +
+                    "experienced killers, they understand that taking lives is far from " +
+                    "commendable and that they will likely face retribution as they mercilessly " +
+                    "eliminate anyone who stands in the revolution's way.\n" +
+                    " This merry band of assassins' newest member is Tatsumi, a naïve boy from a " +
+                    "remote village who had embarked on a journey to help his impoverished" +
+                    " hometown and was won over by not only Night Raid's ideals, but also their " +
+                    "resolve. Akame ga Kill! follows Tatsumi as he fights the Empire and comes " +
+                    "face-to-face with powerful weapons, enemy assassins, challenges to his own" +
+                    " morals and values, and ultimately, what it truly means to be an assassin " +
+                    "with a cause.\n" +
+                    " ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
     };
     //https://www.androidtutorialpoint.com/material-design/
     // android-custom-gridview-example-image-text/#Android_GridView_Custom_Adapter
@@ -158,7 +184,6 @@ public class HomePage extends AppCompatActivity {
                 Intent iClickedAnime = new Intent(HomePage.this, AnimePage.class);
                 iClickedAnime.putExtra("position", position);
                 startActivity(iClickedAnime);
-
             }
         });
     }
@@ -174,7 +199,7 @@ public class HomePage extends AppCompatActivity {
     private void addAnime() {
         //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-from-sql-lite-database-in-android
         //https://stackoverflow.com/questions/15255611/how-to-convert-a-drawable-image-from-resources-to-a-bitmap
-        for(int i = 0; i < animeImages.length; i++) {
+        for(int i = 0; i < animeImages.length - 1; i++) {
            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), animeImages[i]);
 
             ByteArrayOutputStream byteOutput = new ByteArrayOutputStream();
@@ -182,7 +207,8 @@ public class HomePage extends AppCompatActivity {
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteOutput);
 
             byte[] convertedImage = byteOutput.toByteArray();
-            databaseHelper.insertAnime(convertedImage, animeNames[i]);
+             databaseHelper.insertAnime(convertedImage, animeNames[i], avgScore[i], type[i],
+                    status[i], eps[i], aired[i], age[i], animeDesc[i]);
         }
     }
 

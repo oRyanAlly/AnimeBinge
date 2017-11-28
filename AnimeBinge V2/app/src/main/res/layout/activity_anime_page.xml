@@ -41,8 +41,79 @@
         android:layout_toRightOf="@+id/selectedAnime"
         android:fontFamily="sans-serif"
         android:text=""
-        android:textSize="12dp"
         android:textAllCaps="true"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/animeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/selectedAnime"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/selectedAnime"
+        android:layout_toRightOf="@+id/selectedAnime"
+        android:fontFamily="sans-serif"
+        android:text="AVG. Score:"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/animeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/animeScore"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/selectedAnime"
+        android:layout_toRightOf="@+id/selectedAnime"
+        android:fontFamily="sans-serif"
+        android:text="Type:"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/animeStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/animeType"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/selectedAnime"
+        android:layout_toRightOf="@+id/selectedAnime"
+        android:fontFamily="sans-serif"
+        android:text="Status:"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/animeEPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/animeStatus"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@+id/selectedAnime"
+        android:layout_toRightOf="@+id/selectedAnime"
+        android:fontFamily="sans-serif"
+        android:text="EPS:"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/animeAired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/animeEPS"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/selectedAnime"
+        android:layout_toRightOf="@+id/selectedAnime"
+        android:fontFamily="sans-serif"
+        android:text="Aired:"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"  />
+
 
 </android.widget.RelativeLayout>
