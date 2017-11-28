@@ -21,7 +21,7 @@ public class AnimePage extends AppCompatActivity {
 
     DatabaseHelper dhHelper;
     ImageView selectedAnime;
-    TextView animeName, tvAvgScore, tvAnimeType, tvStatus, tvEpisodes, tvAired;
+    TextView animeName, tvAvgScore, tvAnimeType, tvStatus, tvEpisodes, tvAired, tvDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class AnimePage extends AppCompatActivity {
         String sAnimeStatus = anime.getString(anime.getColumnIndex("status"));
         String sEpisodes = anime.getString(anime.getColumnIndex("eps"));
         String sAired = anime.getString(anime.getColumnIndex("aired"));
+        String sDesc = anime.getString(anime.getColumnIndex("desc"));
 
         animeShow.setImage(image);
         selectedAnime = findViewById(R.id.selectedAnime);
@@ -51,7 +52,7 @@ public class AnimePage extends AppCompatActivity {
         tvStatus = findViewById(R.id.tvStatus);
         tvEpisodes = findViewById(R.id.tvEpisodes);
         tvAired = findViewById(R.id.tvAired);
-
+        tvDesc = findViewById(R.id.tvDescription);
 
         ByteArrayInputStream bImageStream = new ByteArrayInputStream(image);
         Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
@@ -62,6 +63,7 @@ public class AnimePage extends AppCompatActivity {
         tvStatus.setText(sAnimeStatus);
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
+        tvDesc.setText(sDesc);
 
     }
 }

@@ -138,7 +138,7 @@ public class HomePage extends AppCompatActivity {
                     "drown in poverty, strife, and ruin. Though the Night Raid members are all " +
                     "experienced killers, they understand that taking lives is far from " +
                     "commendable and that they will likely face retribution as they mercilessly " +
-                    "eliminate anyone who stands in the revolution's way.\n" +
+                    "eliminate anyone who stands in the revolution's way." +
                     " This merry band of assassins' newest member is Tatsumi, a naïve boy from a " +
                     "remote village who had embarked on a journey to help his impoverished" +
                     " hometown and was won over by not only Night Raid's ideals, but also their " +
