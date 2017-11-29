@@ -68,5 +68,6 @@ public class AnimePage extends AppCompatActivity {
         tvStatus.setText(sAnimeStatus);
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
+
     }
 }
