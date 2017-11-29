@@ -7,7 +7,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +26,8 @@ public class AnimePage extends AppCompatActivity {
     DatabaseHelper dhHelper;
     ImageView selectedAnime;
     TextView animeName, tvAvgScore, tvAnimeType, tvStatus, tvEpisodes, tvAired, tvDesc;
-    ExpandTextView etv;
-
+    ExpandTextView expandDescription;
+    ListView lvEpisodes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +57,10 @@ public class AnimePage extends AppCompatActivity {
         tvStatus = findViewById(R.id.tvStatus);
         tvEpisodes = findViewById(R.id.tvEpisodes);
         tvAired = findViewById(R.id.tvAired);
+        lvEpisodes = findViewById(R.id.lvEpisodes);
         //tvDesc = findViewById(R.id.tvDescription);
-        etv = findViewById(R.id.expandDesc);
-        etv.setText(sDesc);
+        expandDescription = findViewById(R.id.expandDesc);
+        expandDescription.setText(sDesc);
 
         ByteArrayInputStream bImageStream = new ByteArrayInputStream(image);
         Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
@@ -69,5 +72,15 @@ public class AnimePage extends AppCompatActivity {
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
 
+        int nNumberofEpisodes = Integer.parseInt(sEpisodes);
+        String[] sarEpisodes = new String[nNumberofEpisodes];
+
+        for(int i = 0; i < nNumberofEpisodes; i++) {
+            String sNum = Integer.toString(i + 1);
+            sarEpisodes[i] = "Episode: " + sNum;
+        }
+        ArrayAdapter<String> arEpisodes = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, sarEpisodes);
+        lvEpisodes.setAdapter(arEpisodes);
     }
 }
