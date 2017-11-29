@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lcodecore.extextview.ExpandTextView;
+
 import java.io.ByteArrayInputStream;
 
 /**
@@ -22,6 +24,7 @@ public class AnimePage extends AppCompatActivity {
     DatabaseHelper dhHelper;
     ImageView selectedAnime;
     TextView animeName, tvAvgScore, tvAnimeType, tvStatus, tvEpisodes, tvAired, tvDesc;
+    ExpandTextView etv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +55,9 @@ public class AnimePage extends AppCompatActivity {
         tvStatus = findViewById(R.id.tvStatus);
         tvEpisodes = findViewById(R.id.tvEpisodes);
         tvAired = findViewById(R.id.tvAired);
-        tvDesc = findViewById(R.id.tvDescription);
+        //tvDesc = findViewById(R.id.tvDescription);
+        etv = findViewById(R.id.expandDesc);
+        etv.setText(sDesc);
 
         ByteArrayInputStream bImageStream = new ByteArrayInputStream(image);
         Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
@@ -63,7 +68,5 @@ public class AnimePage extends AppCompatActivity {
         tvStatus.setText(sAnimeStatus);
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
-        tvDesc.setText(sDesc);
-
     }
 }
