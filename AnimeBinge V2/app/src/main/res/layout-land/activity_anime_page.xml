@@ -35,7 +35,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/tbMenu"
-                android:layout_marginTop="12dp"/>
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/toradora" />
 
             <TextView
                 android:id="@+id/animeName"
@@ -217,7 +218,6 @@
                 android:layout_marginRight="34dp"
                 android:layout_marginStart="36dp"
                 app:srcCompat="@drawable/animebinge" />
-
         </RelativeLayout>
     </ScrollView>
 
@@ -227,7 +227,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/scrollView"
-        android:dividerHeight="10.0sp"/>
+        android:layout_below="@+id/scrollView" />
 
 </android.widget.RelativeLayout>

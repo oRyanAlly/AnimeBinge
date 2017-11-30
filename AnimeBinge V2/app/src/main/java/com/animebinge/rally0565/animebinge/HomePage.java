@@ -44,7 +44,8 @@ public class HomePage extends AppCompatActivity {
             "Hunter X Hunter",
             "Sword Art Online",
             "Tokyo Ghoul",
-            "Toradora!"
+            "Toradora!",
+            "Blank"
     };
     public static int[] animeImages = {
             R.drawable.akamegakill,
@@ -57,6 +58,7 @@ public class HomePage extends AppCompatActivity {
             R.drawable.swordartonline,
             R.drawable.tokyoghoul,
             R.drawable.toradora
+
     };
     public static String[] avgScore = {
             "3.95/5",
@@ -155,7 +157,9 @@ public class HomePage extends AppCompatActivity {
             "",
             "",
             "",
+            ""
     };
+
     //https://www.androidtutorialpoint.com/material-design/
     // android-custom-gridview-example-image-text/#Android_GridView_Custom_Adapter
     // Grab to see if any anime shows are in the database, if it is empty, add the shows in.
@@ -168,7 +172,7 @@ public class HomePage extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(this);
         animeShows = databaseHelper.getAnimes();
 
-        if(animeShows.isEmpty()) {
+        if (animeShows.isEmpty()) {
             addAnime();
             animeShows = databaseHelper.getAnimes();
         }
@@ -187,6 +191,7 @@ public class HomePage extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -199,17 +204,16 @@ public class HomePage extends AppCompatActivity {
     private void addAnime() {
         //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-from-sql-lite-database-in-android
         //https://stackoverflow.com/questions/15255611/how-to-convert-a-drawable-image-from-resources-to-a-bitmap
-        for(int i = 0; i < animeImages.length - 1; i++) {
-           Bitmap bitmap = BitmapFactory.decodeResource(getResources(), animeImages[i]);
+        for (int i = 0; i < animeImages.length; i++) {
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), animeImages[i]);
 
             ByteArrayOutputStream byteOutput = new ByteArrayOutputStream();
 
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteOutput);
 
             byte[] convertedImage = byteOutput.toByteArray();
-             databaseHelper.insertAnime(convertedImage, animeNames[i], avgScore[i], type[i],
+            databaseHelper.insertAnime(convertedImage, animeNames[i], avgScore[i], type[i],
                     status[i], eps[i], aired[i], age[i], animeDesc[i]);
         }
     }
-
 }

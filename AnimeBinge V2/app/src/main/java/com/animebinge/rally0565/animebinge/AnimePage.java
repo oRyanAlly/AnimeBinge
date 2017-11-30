@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.lcodecore.extextview.ExpandTextView;
 
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Rally0565 on 11/23/2017.
@@ -28,6 +30,7 @@ public class AnimePage extends AppCompatActivity {
     TextView animeName, tvAvgScore, tvAnimeType, tvStatus, tvEpisodes, tvAired, tvDesc;
     ExpandTextView expandDescription;
     ListView lvEpisodes;
+    EpisodeAdapter episodeAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,8 +63,8 @@ public class AnimePage extends AppCompatActivity {
         lvEpisodes = findViewById(R.id.lvEpisodes);
         //tvDesc = findViewById(R.id.tvDescription);
         expandDescription = findViewById(R.id.expandDesc);
-        expandDescription.setText(sDesc);
 
+        expandDescription.setText(sDesc);
         ByteArrayInputStream bImageStream = new ByteArrayInputStream(image);
         Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
         selectedAnime.setImageBitmap(bmImage);
@@ -72,6 +75,7 @@ public class AnimePage extends AppCompatActivity {
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
 
+
         int nNumberofEpisodes = Integer.parseInt(sEpisodes);
         String[] sarEpisodes = new String[nNumberofEpisodes];
 
@@ -79,8 +83,8 @@ public class AnimePage extends AppCompatActivity {
             String sNum = Integer.toString(i + 1);
             sarEpisodes[i] = "Episode: " + sNum;
         }
-        ArrayAdapter<String> arEpisodes = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, sarEpisodes);
-        lvEpisodes.setAdapter(arEpisodes);
+        episodeAdapter = new EpisodeAdapter(this, R.drawable.arrow, sarEpisodes);
+        lvEpisodes.setAdapter(episodeAdapter);
+
     }
 }
