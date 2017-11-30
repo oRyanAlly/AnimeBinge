@@ -228,6 +228,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/scrollView"
-        android:dividerHeight="10.0sp"/>
+        android:divider="@color/colorYellow"
+        android:dividerHeight="1dp"/>
 
 </android.widget.RelativeLayout>

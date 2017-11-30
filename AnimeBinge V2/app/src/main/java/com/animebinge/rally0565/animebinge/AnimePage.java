@@ -75,7 +75,9 @@ public class AnimePage extends AppCompatActivity {
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
 
-
+        if(sEpisodes.equals("")) {
+            sEpisodes = "0";
+        }
         int nNumberofEpisodes = Integer.parseInt(sEpisodes);
         String[] sarEpisodes = new String[nNumberofEpisodes];
 
