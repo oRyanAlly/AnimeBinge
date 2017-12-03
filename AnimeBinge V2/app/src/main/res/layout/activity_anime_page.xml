@@ -27,7 +27,6 @@
                 android:minHeight="?attr/actionBarSize"
                 android:background="#101010"/>
 
-
             <ImageView
                 android:id="@+id/selectedAnime"
                 android:layout_width="200dp"

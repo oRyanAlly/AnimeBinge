@@ -25,12 +25,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int database_version = 1;
 
     private static final String tableName = "members";
-    private static final String col1 = "ID";
     private static final String col2 = "name";
     private static final String col3 = "email";
     private static final String col4 = "password";
 
     private static final String animeTable = "Anime";
+    private static final String episodeURLSTbl = "Episodes";
 
     public DatabaseHelper(Context context) {
         super(context, database_name, null, database_version);
@@ -47,15 +47,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "AUTOINCREMENT, " + "image BLOB, name VARCHAR, avgScore VARCHAR(255), " +
                 "type VARCHAR(255), status VARCHAR(255), eps VARCHAR(255), " +
                 " aired VARCHAR(255), age VARCHAR(255), desc VARCHAR)";
+
+        String episodeURLsTbl = "CREATE TABLE " + episodeURLSTbl + " (ID INTEGER PRIMARY KEY " +
+                "AUTOINCREMENT, " + "animeName VARCHAR(255), episodeNum INTEGER, url VARCHAR(255));";
         db.execSQL(createMembersTbl);
         db.execSQL(createAnimeTbl);
+        db.execSQL(episodeURLsTbl);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + tableName);
         db.execSQL("DROP TABLE IF EXISTS " + animeTable);
-
+        db.execSQL("DROP TABLE IF EXISTS " + episodeURLSTbl);
         onCreate(db);
     }
 
@@ -149,6 +153,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return animes;
+    }
+    public boolean addEpisodeURL (String animeName, int nEpisodeNum, String episodeURL) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("animeName", animeName);
+        contentValues.put("episodeNum", nEpisodeNum);
+        contentValues.put("url", episodeURL);
 
+        long result = db.insert(episodeURLSTbl, null, contentValues);
+        db.close();
+        //If data is not inserted, it will return -1
+        if(result == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    public Cursor getEpisode (int episodeNum) {
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
+            String query = "SELECT * FROM " + episodeURLSTbl +
+                    " WHERE episodeNum = '" + episodeNum + "'";
+            Cursor data = db.rawQuery(query, null);
+            if (data != null) {
+                data.moveToFirst();
+            }
+            return data;
+
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

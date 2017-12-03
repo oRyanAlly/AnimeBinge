@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -31,6 +33,7 @@ public class AnimePage extends AppCompatActivity {
     ExpandTextView expandDescription;
     ListView lvEpisodes;
     EpisodeAdapter episodeAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,18 +78,40 @@ public class AnimePage extends AppCompatActivity {
         tvEpisodes.setText(sEpisodes);
         tvAired.setText(sAired);
 
-        if(sEpisodes.equals("")) {
+        if (sEpisodes.equals("")) {
             sEpisodes = "0";
         }
         int nNumberofEpisodes = Integer.parseInt(sEpisodes);
         String[] sarEpisodes = new String[nNumberofEpisodes];
 
-        for(int i = 0; i < nNumberofEpisodes; i++) {
+        for (int i = 0; i < nNumberofEpisodes; i++) {
             String sNum = Integer.toString(i + 1);
             sarEpisodes[i] = "Episode: " + sNum;
         }
         episodeAdapter = new EpisodeAdapter(this, R.drawable.arrow, sarEpisodes);
         lvEpisodes.setAdapter(episodeAdapter);
-
+        lvEpisodes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent iGoToVid = new Intent(AnimePage.this, AnimeVideo.class);
+                iGoToVid.putExtra("episode", position);
+                addURLS();
+                startActivity(iGoToVid);
+            }
+        });
+    }
+    public void addURLS() {
+        int i = 1;
+        String[] sURLs =
+                {
+                    "https://s66.escdn.co/jg6nwp64kjtu7m7cy2tvmmau3mj" +
+                            "tlbr5mcinbf4iuy6hymfuplh2wzpuv23a/v.mp4",
+                        "https://s6.escdn.co/jg6nspg4kjtu7m7cy2tvmyk5st7r2herwpbicp4al" +
+                                "uiseneqnk3jpzjdkzuq/v.mp4"
+                };
+        for (String url: sURLs) {
+            dhHelper.addEpisodeURL("Akame Ga Kill!", i, url);
+            i++;
+        }
     }
 }
