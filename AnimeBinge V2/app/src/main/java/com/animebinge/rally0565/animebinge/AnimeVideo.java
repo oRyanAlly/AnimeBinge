@@ -20,6 +20,8 @@ public class AnimeVideo extends AppCompatActivity {
 
     VideoView vvAnimeShow;
     DatabaseHelper dhHelper;
+    MediaController mediaController;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +34,12 @@ public class AnimeVideo extends AppCompatActivity {
         dhHelper = new DatabaseHelper(this);
         Cursor episode = dhHelper.getEpisode(nEpisode);
 
+        mediaController = new MediaController(this);
         String videoUrl = episode.getString(3);
         Uri uri = Uri.parse(videoUrl);
         vvAnimeShow.setVideoURI(uri);
+        vvAnimeShow.setMediaController(mediaController);
+        mediaController.setAnchorView(vvAnimeShow);
         vvAnimeShow.start();
 
     }

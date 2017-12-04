@@ -104,10 +104,8 @@ public class AnimePage extends AppCompatActivity {
         int i = 1;
         String[] sURLs =
                 {
-                    "https://s66.escdn.co/jg6nwp64kjtu7m7cy2tvmmau3mj" +
-                            "tlbr5mcinbf4iuy6hymfuplh2wzpuv23a/v.mp4",
-                        "https://s6.escdn.co/jg6nspg4kjtu7m7cy2tvmyk5st7r2herwpbicp4al" +
-                                "uiseneqnk3jpzjdkzuq/v.mp4"
+                    "http://s49.stream.proxer.me/files/9/l2lrej38oe4jgs/video.mp4",
+                        "http://s49.stream.proxer.me/files/1/7igvnwel641mrj/video.mp4"
                 };
         for (String url: sURLs) {
             dhHelper.addEpisodeURL("Akame Ga Kill!", i, url);
