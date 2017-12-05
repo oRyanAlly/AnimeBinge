@@ -185,4 +185,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return null;
         }
     }
+    public Cursor findAnime (String animeName) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + animeTable +
+                " WHERE name = '" +  animeName + "'";
+
+        Cursor data = db.rawQuery(query, null);
+        if (data != null) {
+            data.moveToFirst();
+        }
+        return data;
+    }
 }

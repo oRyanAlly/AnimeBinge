@@ -70,30 +70,21 @@
       <file leaf-file-name="AnimePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="94" column="30" lean-forward="false" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+            <state relative-caret-position="635">
+              <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
               <folding>
+                <element signature="e#3584#3968#0" expanded="true" />
                 <element signature="e#3967#3968#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java">
+      <file leaf-file-name="LoginScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/LoginScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="171" column="50" lean-forward="false" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/DatabaseHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="170" column="9" lean-forward="false" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+            <state relative-caret-position="-68">
+              <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -102,10 +93,81 @@
       <file leaf-file-name="AnimeVideo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeVideo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="91">
+              <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Android/sources/android-25/android/view/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="5642" column="0" lean-forward="false" selection-start-line="5642" selection-start-column="0" selection-end-line="5642" selection-end-column="0" />
+              <folding>
+                <element signature="e#880446#880447#0" expanded="true" />
+                <element signature="e#880484#880485#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Handler.java" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Android/sources/android-25/android/os/Handler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="92" column="46" lean-forward="false" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
+              <folding>
+                <element signature="e#30052#30053#0" expanded="true" />
+                <element signature="e#30090#30091#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Looper.java" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Android/sources/android-25/android/os/Looper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Android/sources/android-25/android/app/Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="4488" column="46" lean-forward="false" selection-start-line="4488" selection-start-column="46" selection-end-line="4488" selection-end-column="46" />
+              <folding>
+                <element signature="e#191702#191703#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Intent.java" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Android/sources/android-25/android/content/Intent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="4898" column="0" lean-forward="false" selection-start-line="4898" selection-start-column="0" selection-end-line="4898" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_anime_video.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anime_video.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1841,14 +1903,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/eEpisode.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/Episode.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/EpisodeAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/episode_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_anime_page.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_anime_video.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/LoginScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimePage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_anime_video.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/LoginScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeVideo.java" />
       </list>
     </option>
@@ -1874,9 +1936,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1959,11 +2022,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Imdb1" />
     <property name="device.picker.selection" value="Nexus_5X_API_25" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="android.project.structure.last.selected" value="app" />
@@ -2052,7 +2114,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512358614421" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512458039537" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2100,7 +2162,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512358614421" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512458039537" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2262,7 +2324,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512358614423" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512458039538" />
       </method>
     </configuration>
     <list size="1">
@@ -2315,13 +2377,14 @@
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739422" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32516703" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739422" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32628062" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -2334,7 +2397,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29398665" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29287305" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2344,7 +2407,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2396,94 +2458,29 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeVideo.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeVideo.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/episode_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3638">
-          <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/LoginScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <element signature="e#3967#3968#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anime_page.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3213">
           <caret line="189" column="51" lean-forward="false" selection-start-line="189" selection-start-column="51" selection-end-line="189" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="84" column="9" lean-forward="false" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-          <folding>
-            <element signature="e#3967#3968#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3077">
-          <caret line="206" column="46" lean-forward="false" selection-start-line="206" selection-start-column="46" selection-end-line="206" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anime_page.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3213">
-          <caret line="189" column="51" lean-forward="false" selection-start-line="189" selection-start-column="51" selection-end-line="189" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2494,7 +2491,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2510,6 +2509,7 @@
         <state relative-caret-position="1139">
           <caret line="84" column="9" lean-forward="false" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
           <folding>
+            <element signature="e#3584#3968#0" expanded="true" />
             <element signature="e#3967#3968#0" expanded="true" />
           </folding>
         </state>
@@ -2519,7 +2519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3995">
           <caret line="235" column="48" lean-forward="false" selection-start-line="235" selection-start-column="48" selection-end-line="235" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2530,7 +2529,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3417">
           <caret line="201" column="57" lean-forward="false" selection-start-line="201" selection-start-column="57" selection-end-line="201" selection-end-column="57" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2556,16 +2557,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Android/sources/android-25/android/database/sqlite/SQLiteDatabase.java" />
     <entry file="file://C:/Android/sources/android-25/android/database/AbstractCursor.java" />
     <entry file="file://C:/Android/sources/android-25/android/database/sqlite/SQLiteCursor.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/26.1.0/2b34456c30d6b6e5db5fa3e8fa02f6cebd5531fd/appcompat-v7-26.1.0-sources.jar!/android/support/v7/widget/VectorEnabledTintResources.java" />
-    <entry file="file://C:/Android/sources/android-25/android/app/Instrumentation.java" />
     <entry file="file://C:/Android/sources/android-25/android/graphics/BitmapFactory.java" />
     <entry file="file://C:/Android/sources/android-25/android/graphics/Bitmap.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/26.1.0/2b34456c30d6b6e5db5fa3e8fa02f6cebd5531fd/appcompat-v7-26.1.0-sources.jar!/android/support/v7/app/AppCompatActivity.java" />
     <entry file="file://C:/Android/sources/android-26/java/lang/String.java" />
-    <entry file="file://C:/Android/sources/android-25/android/app/ActivityThread.java" />
     <entry file="file://C:/Android/sdk/sources/android-26/android/app/ActivityThread.java" />
     <entry file="file://C:/Android/sdk/sources/android-26/android/app/Activity.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/episode_item.xml">
@@ -2578,77 +2576,70 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://C:/Android/sources/android-25/android/content/ContentValues.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="57" column="47" lean-forward="false" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anime_page.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="63" selection-end-column="42" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://C:/Android/sources/android-25/android/app/Activity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_name.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_screen.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="6676" column="40" lean-forward="false" selection-start-line="6676" selection-start-column="40" selection-end-line="6676" selection-end-column="40" />
+        <state relative-caret-position="153">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Android/sources/android-25/android/database/sqlite/SQLiteOpenHelper.java">
+    <entry file="file://C:/Android/sources/android-25/android/app/ActivityTransitionState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+        <state relative-caret-position="186">
+          <caret line="129" column="42" lean-forward="false" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Android/sources/android-25/android/content/ContentValues.java">
+    <entry file="file://C:/Android/sources/android-25/android/app/Instrumentation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="94" column="47" lean-forward="false" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+        <state relative-caret-position="152">
+          <caret line="1115" column="72" lean-forward="false" selection-start-line="1115" selection-start-column="72" selection-end-line="1115" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Android/sources/android-25/android/widget/AbsListView.java">
+    <entry file="file://C:/Android/sources/android-26/android/widget/AdapterView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="1155" column="0" lean-forward="false" selection-start-line="1155" selection-start-column="0" selection-end-line="1155" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Android/sources/android-25/android/widget/AdapterView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="305" column="22" lean-forward="true" selection-start-line="305" selection-start-column="22" selection-end-line="305" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="57" column="47" lean-forward="true" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeShow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/LoginScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-691">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Android/sources/android-25/android/database/AbstractWindowedCursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="193">
+          <caret line="280" column="13" lean-forward="false" selection-start-line="280" selection-start-column="13" selection-end-line="280" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2663,10 +2654,186 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeShow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/widget/AdapterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/widget/AbsListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="4035" column="0" lean-forward="false" selection-start-line="4035" selection-start-column="0" selection-end-line="4035" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="2664" column="0" lean-forward="false" selection-start-line="2664" selection-start-column="0" selection-end-line="2664" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#266731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5409#5410#0" expanded="false" />
+            <element signature="e#5435#5436#0" expanded="false" />
+            <element signature="e#8535#8548#0" expanded="false" />
+            <element signature="e#8684#8705#0" expanded="false" />
+            <element signature="e#10077#10111#0" expanded="false" />
+            <element signature="e#10212#10246#0" expanded="false" />
+            <element signature="e#10342#10364#0" expanded="false" />
+            <element signature="e#11500#11501#0" expanded="false" />
+            <element signature="e#11588#11589#0" expanded="false" />
+            <element signature="e#11752#11787#0" expanded="false" />
+            <element signature="e#11880#11907#0" expanded="false" />
+            <element signature="e#11999#12030#0" expanded="false" />
+            <element signature="e#12138#12175#0" expanded="false" />
+            <element signature="e#12286#12333#0" expanded="false" />
+            <element signature="e#20419#20420#0" expanded="false" />
+            <element signature="e#20488#20489#0" expanded="false" />
+            <element signature="e#32328#32329#0" expanded="false" />
+            <element signature="e#32386#32387#0" expanded="false" />
+            <element signature="e#34188#34189#0" expanded="false" />
+            <element signature="e#34249#34250#0" expanded="false" />
+            <element signature="e#34296#34297#0" expanded="false" />
+            <element signature="e#34348#34349#0" expanded="false" />
+            <element signature="e#34578#34579#0" expanded="false" />
+            <element signature="e#34627#34628#0" expanded="false" />
+            <element signature="e#36861#36862#0" expanded="false" />
+            <element signature="e#36916#36917#0" expanded="false" />
+            <element signature="e#38511#38512#0" expanded="false" />
+            <element signature="e#38569#38570#0" expanded="false" />
+            <element signature="e#48366#48716#0" expanded="false" />
+            <element signature="e#48715#48716#0" expanded="false" />
+            <element signature="e#49923#49924#0" expanded="false" />
+            <element signature="e#49986#49987#0" expanded="false" />
+            <element signature="e#50459#50460#0" expanded="false" />
+            <element signature="e#50514#50515#0" expanded="false" />
+            <element signature="e#52838#52839#0" expanded="false" />
+            <element signature="e#52904#52905#0" expanded="false" />
+            <element signature="e#79036#79037#0" expanded="false" />
+            <element signature="e#79081#79082#0" expanded="false" />
+            <element signature="e#81648#81649#0" expanded="false" />
+            <element signature="e#81673#81674#0" expanded="false" />
+            <element signature="e#88169#88170#0" expanded="false" />
+            <element signature="e#88235#88236#0" expanded="false" />
+            <element signature="e#88294#88295#0" expanded="false" />
+            <element signature="e#88327#88328#0" expanded="false" />
+            <element signature="e#88382#88383#0" expanded="false" />
+            <element signature="e#88421#88422#0" expanded="false" />
+            <element signature="e#88619#88620#0" expanded="false" />
+            <element signature="e#88663#88664#0" expanded="false" />
+            <element signature="e#88696#88697#0" expanded="false" />
+            <element signature="e#88726#88727#0" expanded="false" />
+            <element signature="e#88769#88770#0" expanded="false" />
+            <element signature="e#88811#88812#0" expanded="false" />
+            <element signature="e#88849#88850#0" expanded="false" />
+            <element signature="e#88901#88902#0" expanded="false" />
+            <element signature="e#109120#109121#0" expanded="false" />
+            <element signature="e#109174#109175#0" expanded="false" />
+            <element signature="e#109715#109716#0" expanded="false" />
+            <element signature="e#109766#109767#0" expanded="false" />
+            <element signature="e#129460#129461#0" expanded="false" />
+            <element signature="e#129498#129499#0" expanded="false" />
+            <element signature="e#130950#130958#0" expanded="false" />
+            <element signature="e#131162#131163#0" expanded="false" />
+            <element signature="e#131214#131215#0" expanded="false" />
+            <element signature="e#197052#197073#0" expanded="false" />
+            <element signature="e#211478#211479#0" expanded="false" />
+            <element signature="e#211519#211520#0" expanded="false" />
+            <element signature="e#259378#259528#0" expanded="false" />
+            <element signature="e#259527#259528#0" expanded="false" />
+            <element signature="e#260098#261107#0" expanded="false" />
+            <element signature="e#261106#261107#0" expanded="false" />
+            <element signature="e#264507#264508#0" expanded="false" />
+            <element signature="e#264562#264563#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/database/AbstractWindowedCursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/database/sqlite/SQLiteOpenHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/database/sqlite/SQLiteDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1256" column="0" lean-forward="false" selection-start-line="1256" selection-start-column="0" selection-end-line="1256" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-26/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="24886" column="13" lean-forward="false" selection-start-line="24886" selection-start-column="13" selection-end-line="24886" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="92" column="46" lean-forward="false" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
+          <folding>
+            <element signature="e#30052#30053#0" expanded="true" />
+            <element signature="e#30090#30091#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/content/Intent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="4898" column="0" lean-forward="false" selection-start-line="4898" selection-start-column="0" selection-end-line="4898" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="4488" column="46" lean-forward="false" selection-start-line="4488" selection-start-column="46" selection-end-line="4488" selection-end-column="46" />
+          <folding>
+            <element signature="e#191702#191703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anime_video.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="96">
+          <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -2674,36 +2841,48 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="171" column="50" lean-forward="false" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="50" />
+        <state relative-caret-position="159">
+          <caret line="180" column="13" lean-forward="false" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="94" column="30" lean-forward="false" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+        <state relative-caret-position="635">
+          <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
           <folding>
+            <element signature="e#3584#3968#0" expanded="true" />
             <element signature="e#3967#3968#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/DatabaseHelper.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/LoginScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="170" column="9" lean-forward="false" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+        <state relative-caret-position="-68">
+          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sources/android-25/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="5642" column="0" lean-forward="false" selection-start-line="5642" selection-start-column="0" selection-end-line="5642" selection-end-column="0" />
+          <folding>
+            <element signature="e#880446#880447#0" expanded="true" />
+            <element signature="e#880484#880485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/animebinge/rally0565/animebinge/AnimeVideo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="91">
+          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
           <folding />
         </state>
       </provider>

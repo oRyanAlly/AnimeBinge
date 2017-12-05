@@ -104,7 +104,7 @@ public class AnimePage extends AppCompatActivity {
         int i = 1;
         String[] sURLs =
                 {
-                    "http://s49.stream.proxer.me/files/9/l2lrej38oe4jgs/video.mp4",
+                    "https://www11.mp4upload.com:282/d/rkx3mfcaz3b4quuoiwueqnclkpfgu5i74qwknrwkorr7yw2mlq7ne2po/video.mp4",
                         "http://s49.stream.proxer.me/files/1/7igvnwel641mrj/video.mp4"
                 };
         for (String url: sURLs) {

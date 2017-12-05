@@ -33,7 +33,6 @@ public class HomePage extends AppCompatActivity {
     GridView gvAnime;
 
     public static ArrayList<AnimeShow> animeShows;
-    public static ArrayList<AnimeShow> animes;
     public static String[] animeNames = {
             "Akame Ga Kill!",
             "Another",
