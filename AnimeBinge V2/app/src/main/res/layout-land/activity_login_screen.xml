@@ -49,7 +49,8 @@
         android:layout_alignStart="@+id/imgAnime"
         android:layout_marginTop="105dp"
         android:layout_alignRight="@+id/imgAnime"
-        android:layout_alignEnd="@+id/imgAnime" />
+        android:layout_alignEnd="@+id/imgAnime"
+        android:textCursorDrawable="@null"/>
 
     <EditText
         android:id="@+id/txtPassword"
@@ -64,7 +65,8 @@
         android:layout_alignLeft="@+id/txtEmail"
         android:layout_alignStart="@+id/txtEmail"
         android:layout_alignRight="@+id/txtEmail"
-        android:layout_alignEnd="@+id/txtEmail" />
+        android:layout_alignEnd="@+id/txtEmail"
+        android:textCursorDrawable="@null" />
 
     <Button
         android:id="@+id/btnLogin"

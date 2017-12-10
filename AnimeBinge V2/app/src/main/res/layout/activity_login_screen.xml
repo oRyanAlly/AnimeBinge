@@ -49,6 +49,7 @@
         android:fontFamily="sans-serif"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
+        android:textCursorDrawable="@null"
         android:visibility="visible" />
 
     <EditText
@@ -65,7 +66,8 @@
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textCursorDrawable="@null" />
 
     <Button
         android:id="@+id/btnLogin"
