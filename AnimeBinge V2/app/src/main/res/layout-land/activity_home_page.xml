@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.animebinge.rally0565.animebinge.HomePage">
 
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/tbMenu"
         android:layout_width="match_parent"
@@ -32,6 +31,7 @@
         android:id="@+id/gvAnime"
         android:verticalSpacing="0dp"
         android:horizontalSpacing="0dp"
+        android:columnWidth="450px"
         android:stretchMode="columnWidth"
         android:numColumns="auto_fit"
         android:clickable="true"/>

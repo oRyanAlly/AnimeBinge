@@ -9,9 +9,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import java.util.ArrayList;
@@ -41,23 +43,22 @@ public class AnimeVideo extends AppCompatActivity implements View.OnClickListene
         ibtnNext = findViewById(R.id.imgbtnNext);
         ibtnEpisodes = findViewById(R.id.imgbtnEpisodes);
 
-
         ibtnNext.setOnClickListener(this);
-        //ibtnEpisodes.setOnClickListener((View.OnClickListener) this);
+        ibtnEpisodes.setOnClickListener(new ImageButton.OnClickListener() {
+            public void onClick (View v){
+            Intent iGoBack = new Intent(AnimeVideo.this, AnimePage.class);
+            startActivity(iGoBack);
+            }
+        });
         Intent pastedIntent = getIntent();
         nEpisode = pastedIntent.getIntExtra("episode", 0);
         nEpisode = nEpisode + 1;
         dhHelper = new DatabaseHelper(this);
         Cursor episode = dhHelper.getEpisode(nEpisode);
-        if(episode.getCount() == 0) {
-            ibtnNext.setVisibility(View.GONE);
-        }
-        else {
             Cursor anime = dhHelper.findAnime(episode.getString(1));
             nEpisodes = Integer.parseInt(anime.getString(6));
             String sAnimeTitle = episode.getString(1);
             String sEpisode = episode.getString(2);
-
             animeTitle.setText(sAnimeTitle);
             animeEpisodeNum.setText("Episode " + sEpisode);
             mediaController = new MediaController(this);
@@ -67,9 +68,12 @@ public class AnimeVideo extends AppCompatActivity implements View.OnClickListene
             vvAnimeShow.setMediaController(mediaController);
             mediaController.setAnchorView(vvAnimeShow);
             vvAnimeShow.start();
-        }
-    }
+            Cursor nextEpisode = dhHelper.getEpisode(nEpisode + 1);
 
+            if(nextEpisode.getCount() == 0) {
+                ibtnNext.setVisibility(View.INVISIBLE);
+            }
+        }
     @Override
     public void onClick(View v) {
         if (nEpisode != nEpisodes) {
