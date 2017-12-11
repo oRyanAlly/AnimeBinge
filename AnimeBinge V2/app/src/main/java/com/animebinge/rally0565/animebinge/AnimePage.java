@@ -117,8 +117,9 @@ public class AnimePage extends AppCompatActivity {
     //Store anime video links for specific animes
     public void addURLS() {
         int i = 1;
-        sURLs = new String[] {"http://s7vxx.animeheaven.eu/video/Akame_ga_Kill!--1--1471051479.mp4?w3w174",
-                        "http://s49.stream.proxer.me/files/1/7igvnwel641mrj/video.mp4"};
+        sURLs = new String[] {"http://s7vxx.animeheaven.eu/video/Akame_ga_Kill!--1--14" +
+                "71051479.mp4?w3w174",
+                        "http://s9y.animeheaven.eu/720pi/Akame_ga_Kill!--2--1471051481.mp4?d3d174"};
         for (String url: sURLs) {
             dhHelper.addEpisodeURL("Akame Ga Kill!", i, url);
             i++;
