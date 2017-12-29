@@ -49,7 +49,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " aired VARCHAR(255), age VARCHAR(255), desc VARCHAR)";
 
         String episodeURLsTbl = "CREATE TABLE " + episodeURLSTbl + " (ID INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, " + "animeName VARCHAR(255), episodeNum INTEGER, url VARCHAR(255));";
+                "AUTOINCREMENT, "
+                + "animeName VARCHAR(255), episodeNum INTEGER, url VARCHAR(255));";
         db.execSQL(createMembersTbl);
         db.execSQL(createAnimeTbl);
         db.execSQL(episodeURLsTbl);
@@ -124,7 +125,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query = "SELECT * FROM " + animeTable;
         ArrayList<AnimeShow> animes = new ArrayList<>();
         Cursor data = db.rawQuery(query, null);
-        //https://stackoverflow.com/questions/27818786/fetch-data-from-sqlite-and-display-in-gridview
+        //https://stackoverflow.com/questions/27818786/fetch-data-from-sqlite-and-
+        //
+        // display-in-gridview
         if(data != null) {
             while(data.moveToNext()) {
                 int id = data.getInt(data.getColumnIndex("ID"));

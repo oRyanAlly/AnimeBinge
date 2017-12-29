@@ -201,8 +201,10 @@ public class HomePage extends AppCompatActivity {
     // Decrypt each image in the array into a bitmap then cover it into a byte to be stored
     //in the database
     private void addAnime() {
-        //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-from-sql-lite-database-in-android
-        //https://stackoverflow.com/questions/15255611/how-to-convert-a-drawable-image-from-resources-to-a-bitmap
+        //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-
+        // from-sql-lite-database-in-android
+        //https://stackoverflow.com/questions/15255611/how-to-convert-a-drawable-image
+        // -from-resources-to-a-bitmap
         for (int i = 0; i < animeImages.length; i++) {
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), animeImages[i]);
 

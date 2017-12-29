@@ -34,7 +34,7 @@ public class EpisodeAdapter extends ArrayAdapter<String> {
         this.context = context;
         this.episodes = episodes;
         this.imgID = imgID;
-    }
+     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

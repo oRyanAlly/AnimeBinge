@@ -84,7 +84,8 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         });
         tvForgotPassword.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Intent iResetPassword = new Intent(LoginScreen.this, ResetPassword.class);
+                Intent iResetPassword = new Intent(LoginScreen.this,
+                        ResetPassword.class);
                 startActivity(iResetPassword);
             }
         });
@@ -112,7 +113,8 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                     if (sPassword.length() < 8 || sPassword == null) {
                         etPassword.setError("Invalid Password");
                     } else if (storedPassword.equals(sPassword)) {
-                        Intent iHomePage = new Intent(LoginScreen.this, HomePage.class);
+                        Intent iHomePage = new Intent(LoginScreen.this,
+                                HomePage.class);
                         startActivity(iHomePage);
                     }
                 }
@@ -125,7 +127,8 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
             etEmail.setError("Email not found!");
         }
     }
-    //Source: https://stackoverflow.com/questions/22348212/android-check-if-an-email-address-is-valid-or-not
+    //Source: https://stackoverflow.com/questions/22348212
+    // /android-check-if-an-email-address-is-valid-or-not
     //Checks to see if a email matches the according pattern
 
     public final static boolean isValidEmail(CharSequence email) {
@@ -142,9 +145,11 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         boolean insertDATA = dhDatabaseHelper.addEmailandPass(email, password);
 
         if (insertDATA) {
-            Toast.makeText(this, "Account has been created", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Account has been created",
+                    Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Account was not successfully created.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Account was not successfully created.",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }
