@@ -26,13 +26,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.System.in;
+import static java.lang.System.load;
 
 public class HomePage extends AppCompatActivity {
 
     DatabaseHelper databaseHelper;
     GridView gvAnime;
 
-    public static ArrayList<AnimeShow> animeShows;
+    ArrayList<AnimeShow> animeShows;
     public static String[] animeNames = {
             "Akame Ga Kill!",
             "Another",
@@ -172,7 +173,8 @@ public class HomePage extends AppCompatActivity {
         animeShows = databaseHelper.getAnimes();
 
         if (animeShows.isEmpty()) {
-            addAnime();
+            HomePage homePage = new HomePage();
+            homePage.addAnime();
             animeShows = databaseHelper.getAnimes();
         }
         Toolbar tbMenu = (Toolbar) findViewById(R.id.tbMenu);
@@ -180,6 +182,10 @@ public class HomePage extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         gvAnime = (GridView) findViewById(R.id.gvAnime);
 
+        gvAnime.setVisibility(View.INVISIBLE);
+
+        loadAnimeTask loadAnime = new loadAnimeTask(this, animeShows, gvAnime);
+        loadAnime.execute();
         gvAnime.setAdapter(new AnimeListAdapter(this, R.layout.griditem_layout, animeShows));
         gvAnime.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -189,6 +195,7 @@ public class HomePage extends AppCompatActivity {
                 startActivity(iClickedAnime);
             }
         });
+        databaseHelper.close();
     }
 
     @Override
@@ -200,7 +207,7 @@ public class HomePage extends AppCompatActivity {
 
     // Decrypt each image in the array into a bitmap then cover it into a byte to be stored
     //in the database
-    private void addAnime() {
+    public void addAnime() {
         //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-
         // from-sql-lite-database-in-android
         //https://stackoverflow.com/questions/15255611/how-to-convert-a-drawable-image

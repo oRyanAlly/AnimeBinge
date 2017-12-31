@@ -7,6 +7,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -69,6 +72,9 @@ public class AnimePage extends AppCompatActivity {
         tvAired = findViewById(R.id.tvAired);
         lvEpisodes = findViewById(R.id.lvEpisodes);
         expandDescription = findViewById(R.id.expandDesc);
+        Toolbar tbMenu = (Toolbar) findViewById(R.id.tbMenu);
+        setSupportActionBar(tbMenu);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         expandDescription.setText(sDesc);
         ByteArrayInputStream bImageStream = new ByteArrayInputStream(image);
@@ -113,7 +119,12 @@ public class AnimePage extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
     //Store anime video links for specific animes
     public void addURLS() {
         int i = 1;
