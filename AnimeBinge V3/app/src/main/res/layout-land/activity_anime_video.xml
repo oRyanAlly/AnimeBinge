@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#101010"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/tbMenu"
+        app:srcCompat="@drawable/animebinge" />
+
+    <VideoView
+        android:id="@+id/animeVideo"
+        android:layout_width="500dp"
+        android:layout_height="210dp"
+        android:layout_below="@+id/tbMenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/animeNameEpisode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/animeVideo"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/animeVideo"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/animeEpisode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/animeNameEpisode"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/animeNameEpisode"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+
+    <ImageButton
+        android:id="@+id/imgbtnNext"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/animeVideo"
+        android:layout_alignRight="@+id/animeVideo"
+        android:layout_alignTop="@+id/animeNameEpisode"
+        android:scaleX="-1"
+        app:srcCompat="?android:attr/actionModeCloseDrawable" />
+
+    <ImageButton
+        android:id="@+id/imgbtnEpisodes"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/imgbtnNext"
+        android:layout_toLeftOf="@+id/imgbtnNext"
+        android:layout_toStartOf="@+id/imgbtnNext"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:scaleX="-1"
+        app:srcCompat="@drawable/ic_action_name" />
+
+</RelativeLayout>
