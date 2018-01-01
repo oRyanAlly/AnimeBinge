@@ -173,8 +173,7 @@ public class HomePage extends AppCompatActivity {
         animeShows = databaseHelper.getAnimes();
 
         if (animeShows.isEmpty()) {
-            HomePage homePage = new HomePage();
-            homePage.addAnime();
+            addAnime();
             animeShows = databaseHelper.getAnimes();
         }
         Toolbar tbMenu = (Toolbar) findViewById(R.id.tbMenu);
