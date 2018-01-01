@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activity.HomePage">
     <item
-        android:id="@+id/action_refresh"
+        android:id="@+id/action_home"
         android:orderInCategory="100"
         android:icon="@drawable/ic_action_name"
         style="@style/OverFlowMenu"
-        android:title="Menu"
+        android:title="Home"
         app:showAsAction="never"/>
     <item
         android:id="@+id/action_settings"

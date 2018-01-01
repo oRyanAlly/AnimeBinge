@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.GridLayoutAnimationController;
 import android.widget.AdapterView;
@@ -204,8 +205,23 @@ public class HomePage extends AppCompatActivity {
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-    // Decrypt each image in the array into a bitmap then cover it into a byte to be stored
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent iSettings = new Intent(HomePage.this, Settings.class);
+                startActivity(iSettings);
+                return true;
+            case R.id.action_home:
+                Intent iHomePage = new Intent(HomePage.this, HomePage.class);
+                startActivity(iHomePage);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+     // Decrypt each image in the array into a bitmap then cover it into a byte to be stored
     //in the database
     public void addAnime() {
         //https://stackoverflow.com/questions/13840504/how-to-save-and-retrive-images-

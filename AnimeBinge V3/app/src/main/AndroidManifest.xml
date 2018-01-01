@@ -25,6 +25,7 @@
             android:theme="@style/OverFlowMenu"/>
         <activity android:name=".AnimePage"/>
         <activity android:name=".AnimeVideo"/>
+        <activity android:name=".Settings"/>
     </application>
 
 </manifest>

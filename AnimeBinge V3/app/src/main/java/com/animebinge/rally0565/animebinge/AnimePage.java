@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -124,6 +125,22 @@ public class AnimePage extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent iSettings = new Intent(AnimePage.this, Settings.class);
+                startActivity(iSettings);
+                return true;
+            case R.id.action_home:
+                Intent iHomePage = new Intent(AnimePage.this, HomePage.class);
+                startActivity(iHomePage);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     //Store anime video links for specific animes
     public void addURLS() {
