@@ -36,12 +36,6 @@ public class loadAnimeTask extends AsyncTask<Void, Integer, ArrayList<AnimeShow>
         animeShows = databaseHelper.getAnimes();
 
         synchronized (this) {
-            if (animeShows.isEmpty()) {
-                HomePage homePage = new HomePage();
-                homePage.addAnime();
-                animeShows = databaseHelper.getAnimes();
-                databaseHelper.close();
-            }
             while (i < animeShows.size())
             {
                 try {
@@ -70,7 +64,7 @@ public class loadAnimeTask extends AsyncTask<Void, Integer, ArrayList<AnimeShow>
     @Override
     protected void onPostExecute(ArrayList<AnimeShow> animeShows) {
         gvAnime.setVisibility(View.VISIBLE);
-        progressDialog.cancel();
+        progressDialog.dismiss();
     }
 
     @Override
