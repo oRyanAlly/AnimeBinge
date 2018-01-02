@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 import java.util.ArrayList;
 
 public class LoginScreen extends AppCompatActivity implements View.OnClickListener {
@@ -30,13 +32,16 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        System.out.println("Refreshed Token: " + refreshedToken);
         //Define all Widgets
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
         etEmail = (EditText) findViewById(R.id.txtEmail);
         etPassword = (EditText) findViewById(R.id.txtPassword);
         tvForgotPassword = (TextView) findViewById(R.id.tvResetPassword);
-        this.deleteDatabase("Anime.db");
+        //this.deleteDatabase("Anime.db");
         dhDatabaseHelper = new DatabaseHelper(this);
         dhDatabaseHelper.getWritableDatabase();
         //Attached Listeners to Specified Buttons
