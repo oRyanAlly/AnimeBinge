@@ -119,18 +119,14 @@
                 android:textColor="#FFFFFF"
                 android:textSize="12dp" />
 
-            <TextView
-                android:id="@+id/tvAvgScore"
+            <RatingBar
+                android:id="@+id/ratingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/animeScore"
-                android:fontFamily="sans-serif"
-                android:text=""
-                android:textAllCaps="true"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp" />
+                style="?android:attr/ratingBarStyleSmall"/>
 
             <TextView
                 android:id="@+id/tvAnimeType"
@@ -218,7 +214,6 @@
                 android:layout_marginRight="34dp"
                 android:layout_marginStart="36dp"
                 app:srcCompat="@drawable/animebinge" />
-
         </RelativeLayout>
     </ScrollView>
 

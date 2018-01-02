@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -16,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +41,7 @@ public class AnimePage extends AppCompatActivity {
     ExpandTextView expandDescription;
     ListView lvEpisodes;
     EpisodeAdapter episodeAdapter;
+    RatingBar ratingBar;
     public static String[] sURLs;
 
     @Override
@@ -55,7 +60,7 @@ public class AnimePage extends AppCompatActivity {
         // Assign each variable with a value defined within an Animeshow
         byte[] image = anime.getBlob(anime.getColumnIndex("image"));
         String sName = anime.getString(anime.getColumnIndex("name"));
-        String sAvgScore = anime.getString(anime.getColumnIndex("avgScore"));
+        double dAvgScore = anime.getDouble(anime.getColumnIndex("avgScore"));
         String sAnimeType = anime.getString(anime.getColumnIndex("type"));
         String sAnimeStatus = anime.getString(anime.getColumnIndex("status"));
         String sEpisodes = anime.getString(anime.getColumnIndex("eps"));
@@ -66,13 +71,14 @@ public class AnimePage extends AppCompatActivity {
         animeShow.setImage(image);
         selectedAnime = findViewById(R.id.selectedAnime);
         animeName = findViewById(R.id.animeName);
-        tvAvgScore = findViewById(R.id.tvAvgScore);
         tvAnimeType = findViewById(R.id.tvAnimeType);
         tvStatus = findViewById(R.id.tvStatus);
         tvEpisodes = findViewById(R.id.tvEpisodes);
         tvAired = findViewById(R.id.tvAired);
         lvEpisodes = findViewById(R.id.lvEpisodes);
         expandDescription = findViewById(R.id.expandDesc);
+        ratingBar = findViewById(R.id.ratingBar);
+
         Toolbar tbMenu = (Toolbar) findViewById(R.id.tbMenu);
         setSupportActionBar(tbMenu);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -82,7 +88,9 @@ public class AnimePage extends AppCompatActivity {
         Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
         selectedAnime.setImageBitmap(bmImage);
         animeName.setText(sName);
-        tvAvgScore.setText(sAvgScore);
+        ratingBar.setRating((float)dAvgScore);
+        Drawable progress = ratingBar.getProgressDrawable();
+        DrawableCompat.setTint(progress, Color.YELLOW);
         tvAnimeType.setText(sAnimeType);
         tvStatus.setText(sAnimeStatus);
         tvEpisodes.setText(sEpisodes);

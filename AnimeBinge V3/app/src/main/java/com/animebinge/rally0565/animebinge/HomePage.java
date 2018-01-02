@@ -63,7 +63,7 @@ public class HomePage extends AppCompatActivity {
     };
     public static double[] avgScore = {
             3.95,
-            0,
+            2.5,
             0,
             0,
             0,
