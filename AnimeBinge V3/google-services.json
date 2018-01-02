@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "415567121599",
+    "firebase_url": "https://animebingev-3.firebaseio.com",
+    "project_id": "animebingev-3",
+    "storage_bucket": "animebingev-3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415567121599:android:c1463de606acfaeb",
+        "android_client_info": {
+          "package_name": "com.animebinge.rally0565.animebinge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415567121599-saprqd1fe831q9ubqjguj1elsu9uide2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcTsKQ8lIY9M1ru3IwI7bLc9pQy_bCMu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

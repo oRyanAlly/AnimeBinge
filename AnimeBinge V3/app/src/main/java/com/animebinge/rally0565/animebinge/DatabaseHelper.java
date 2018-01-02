@@ -44,7 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 col4 + " VARCHAR(255)) ";
 
         String createAnimeTbl = "CREATE TABLE " + animeTable + " (ID INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, " + "image BLOB, name VARCHAR, avgScore VARCHAR(255), " +
+                "AUTOINCREMENT, " + "image BLOB, name VARCHAR, avgScore REAL, " +
                 "type VARCHAR(255), status VARCHAR(255), eps VARCHAR(255), " +
                 " aired VARCHAR(255), age VARCHAR(255), desc VARCHAR)";
 
@@ -104,7 +104,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return null;
         }
     }
-    public void insertAnime(byte[] image, String name, String avgScore, String type, String status,
+    public void insertAnime(byte[] image, String name, double avgScore, String type, String status,
                             String eps, String aired, String age, String desc) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -133,7 +133,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 int id = data.getInt(data.getColumnIndex("ID"));
                 byte[] image = data.getBlob(data.getColumnIndex("image"));
                 String name = data.getString(data.getColumnIndex("name"));
-                String avgScore = data.getString(data.getColumnIndex("avgScore"));
+                double avgScore = data.getDouble(data.getColumnIndex("avgScore"));
                 String type = data.getString(data.getColumnIndex("type"));
                 String status = data.getString(data.getColumnIndex("status"));
                 String eps = data.getString(data.getColumnIndex("eps"));

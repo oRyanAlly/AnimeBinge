@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "526968469334",
+    "firebase_url": "https://animebinge-v3.firebaseio.com",
+    "project_id": "animebinge-v3",
+    "storage_bucket": "animebinge-v3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526968469334:android:c1463de606acfaeb",
+        "android_client_info": {
+          "package_name": "com.animebinge.rally0565.animebinge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526968469334-q0gqaen45jp9q95eci5o5hermfke631i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.animebinge.rally0565.animebinge",
+            "certificate_hash": "954e62907a2d006d639668c078442e25f0dff46b"
+          }
+        },
+        {
+          "client_id": "526968469334-vi512l9r0uto5nnspkf5s2irmr08fuep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMltW31JJMocs1OfD8ELt5YfpgeAx7WAI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526968469334-vi512l9r0uto5nnspkf5s2irmr08fuep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -61,17 +61,17 @@ public class HomePage extends AppCompatActivity {
             R.drawable.toradora
 
     };
-    public static String[] avgScore = {
-            "3.95/5",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+    public static double[] avgScore = {
+            3.95,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
     };
     public static String[] type = {
             "TV",

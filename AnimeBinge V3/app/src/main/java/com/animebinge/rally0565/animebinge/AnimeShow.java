@@ -8,7 +8,7 @@ public class AnimeShow {
     private int id;
     private byte[] image;
     private String sName;
-    private String avgScore;
+    private double avgScore;
     private String type;
     private String status;
     private String eps;
@@ -20,7 +20,7 @@ public class AnimeShow {
 
     }
 
-    public AnimeShow(int id, String name, byte[] image, String avgScore, String type, String status,
+    public AnimeShow(int id, String name, byte[] image, double avgScore, String type, String status,
                      String eps, String aired, String age, String desc) {
         this.id = id;
         this.sName = name;
@@ -61,11 +61,11 @@ public class AnimeShow {
         this.sName = name;
     }
 
-    public String getAvgScore() {
+    public double getAvgScore() {
         return avgScore;
     }
 
-    public void setAvgScore(String avgScore) {
+    public void setAvgScore(double avgScore) {
         this.avgScore = avgScore;
     }
 
