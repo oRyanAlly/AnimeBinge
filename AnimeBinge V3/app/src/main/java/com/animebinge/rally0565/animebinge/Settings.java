@@ -15,7 +15,6 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-
         btnCrunchy = findViewById(R.id.btnCrunchy);
         btnFunimation = findViewById(R.id.btnFunimation);
 
