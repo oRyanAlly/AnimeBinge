@@ -26,6 +26,13 @@
         <activity android:name=".AnimePage"/>
         <activity android:name=".AnimeVideo"/>
         <activity android:name=".Settings"/>
+        <service android:name=".BackgroundService"/>
+        <service
+            android:name=".FirebaseInstance">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

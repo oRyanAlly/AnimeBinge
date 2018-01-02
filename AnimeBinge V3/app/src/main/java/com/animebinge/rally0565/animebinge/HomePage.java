@@ -197,7 +197,8 @@ public class HomePage extends AppCompatActivity {
         });
         databaseHelper.close();
 
-        start
+        startService(new Intent(getBaseContext(), BackgroundService.class));
+
     }
 
     @Override
