@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1e1e1e"
     tools:context="com.animebinge.rally0565.animebinge.Settings">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tbMenu"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/animebinge" />
+
+    <TextView
+        android:id="@+id/txtSimilarApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tbMenu"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="sans-serif"
+        android:text="SIMILAR APPLICATIONS:"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btnCrunchy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtSimilarApps"
+        android:layout_alignLeft="@+id/txtSimilarApps"
+        android:layout_alignRight="@+id/txtSimilarApps"
+        android:layout_alignStart="@+id/txtSimilarApps"
+        android:layout_below="@+id/txtSimilarApps"
+        android:layout_marginTop="15dp"
+        android:background="#FF7216"
+        android:textStyle="bold"
+        android:text="CrunchyROLL" />
+
+    <Button
+        android:id="@+id/btnFunimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCrunchy"
+        android:layout_alignBottom="@+id/btnCrunchy"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/btnCrunchy"
+        android:layout_toRightOf="@+id/btnCrunchy"
+        android:background="#483D8B"
+        android:textStyle="bold"
+        android:text="FUNIMATION" />
+
+
+</RelativeLayout>
