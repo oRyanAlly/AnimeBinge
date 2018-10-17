@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -51,39 +52,43 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                 //When Sign Up is clicked, hide some of the widgets
                 //Rename one, then perform validation(for now)
                 //Then return back to home screen
-                if (btnSignUp.getText().toString() == "SIGN UP") {
-                    etEmail.setText("");
-                    etPassword.setText("");
+                String btnText = btnSignUp.getText().toString();
+                if (btnText.equals("SIGN UP")) {
+                    etEmail.getText().clear();
+                    etPassword.getText().clear();
                     etEmail.setError(null);
                     etPassword.setError(null);
-                }
-                btnLogin.setVisibility(View.GONE);
-                tvForgotPassword.setVisibility(View.GONE);
-                etEmail.setFocusable(true);
-                btnSignUp.setText("CREATE ACCOUNT");
-                String sPassword = etPassword.getText().toString();
-                String sEmail = etEmail.getText().toString();
-                Cursor member = dhDatabaseHelper.getMember(sEmail);
-                if (member.getCount() == 0) {
-                    if (!isValidEmail(sEmail)) {
-                        etEmail.setError("Please enter a valid email address");
-                    }
-                    if (sPassword.length() < 8 || sPassword == null) {
-                        etPassword.setError("Please enter a password greater than 8 characters");
-                    }
-                } else if (member.getString(2).equals(etEmail.getText().toString()))
-                {
-                    etEmail.setError("Email already exists!");
-                }
-                if (etEmail.getError() == null && etPassword.getError() == null) {
-                    btnLogin.setVisibility(View.VISIBLE);
-                    tvForgotPassword.setVisibility(View.VISIBLE);
-                    btnSignUp.setText("SIGN UP");
-                    etEmail.setText("");
-                    etPassword.setText("");
-                    addEmailandPass(sEmail, sPassword);
+                    btnLogin.setVisibility(View.GONE);
+                    tvForgotPassword.setVisibility(View.GONE);
+                    etEmail.requestFocus();
+                    btnSignUp.setText("CREATE ACCOUNT");
                 } else {
-                    etEmail.setError("Please enter a valid email address");
+                    String sPassword = etPassword.getText().toString();
+                    String sEmail = etEmail.getText().toString();
+                    Cursor member = dhDatabaseHelper.getMember(sEmail);
+
+                    if (member.getCount() == 0) {
+                        if (!isValidEmail(sEmail)) {
+                            etEmail.setError("Please enter a valid email address");
+                        }
+                        if (sPassword.length() < 8 || sPassword == null) {
+                            etPassword.setError("Please enter a password greater than 8 characters");
+                        }
+                    } else if (member.getString(2).equals(etEmail.getText().toString())) {
+                        etEmail.setError("Email already exists!");
+                    }
+                    if (etEmail.getError() == null && etPassword.getError() == null) {
+                        btnLogin.setVisibility(View.VISIBLE);
+                        tvForgotPassword.setVisibility(View.VISIBLE);
+                        btnSignUp.setText("SIGN UP");
+                        etEmail.setText("");
+                        etPassword.setText("");
+                        addEmailandPass(sEmail, sPassword);
+                    } else {
+                        Toast.makeText(btnSignUp.getContext(),
+                                "Invalid Email or Password, Please try again.",
+                                Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -101,6 +106,8 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     // and strong password in order to login successfully
     @Override
     public void onClick(View v) {
+        etEmail.onEditorAction(EditorInfo.IME_ACTION_DONE);
+        etPassword.onEditorAction(EditorInfo.IME_ACTION_DONE);
         String sEmail = etEmail.getText().toString().trim();
         String sPassword = etPassword.getText().toString().trim();
         Cursor member = dhDatabaseHelper.getMember(sEmail);
@@ -121,15 +128,19 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                         Intent iHomePage = new Intent(LoginScreen.this,
                                 HomePage.class);
                         startActivity(iHomePage);
+                        Toast.makeText(this, "Successful login!", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(this, "Invalid Email or Password, " +
+                                "Please try again", Toast.LENGTH_SHORT).show();
                     }
                 }
             } else {
                 etEmail.setError("Email does not exist");
             }
         } else {
-            Toast.makeText(this, "This account does not exist",
+            Toast.makeText(this, "Invalid Email or Password, Please try again.",
                     Toast.LENGTH_SHORT).show();
-            etEmail.setError("Email not found!");
         }
     }
     //Source: https://stackoverflow.com/questions/22348212
@@ -137,10 +148,11 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     //Checks to see if a email matches the according pattern
 
     public final static boolean isValidEmail(CharSequence email) {
-        if (TextUtils.isEmpty(email)) {
+        if(Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            return true;
+        }
+        else {
             return false;
-        } else {
-            return Patterns.EMAIL_ADDRESS.matcher(email).matches();
         }
     }
 

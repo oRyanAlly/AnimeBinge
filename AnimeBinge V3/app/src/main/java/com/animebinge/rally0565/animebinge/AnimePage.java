@@ -122,7 +122,7 @@ public class AnimePage extends AppCompatActivity {
                     startActivity(iGoToVid);
                 }
                 else {
-                    Toast.makeText(AnimePage.this, "Episode has not been added yet",
+                    Toast.makeText(AnimePage.this, "Episode has not been added",
                             Toast.LENGTH_SHORT).show();
                 }
             }
