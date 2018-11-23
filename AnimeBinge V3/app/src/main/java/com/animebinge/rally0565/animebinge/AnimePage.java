@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -42,6 +43,7 @@ public class AnimePage extends AppCompatActivity {
     ListView lvEpisodes;
     EpisodeAdapter episodeAdapter;
     RatingBar ratingBar;
+    private static final int FRICTION_SCALE = 10;
     public static String[] sURLs;
 
     @Override
@@ -111,6 +113,7 @@ public class AnimePage extends AppCompatActivity {
         //& pass the episode number so it can grab the appropriate episode
         episodeAdapter = new EpisodeAdapter(this, R.drawable.arrow, sarEpisodes);
         lvEpisodes.setAdapter(episodeAdapter);
+        lvEpisodes.setFriction(ViewConfiguration.getScrollFriction() * FRICTION_SCALE);
         lvEpisodes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
