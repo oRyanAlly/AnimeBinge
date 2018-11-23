@@ -16,8 +16,8 @@
         android:id="@+id/tvItemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="13sp"
         android:layout_below="@id/imgImage"
+        android:layout_alignEnd="@+id/imgImage"
         android:layout_alignRight="@+id/imgImage"
-        android:layout_alignEnd="@+id/imgImage" />
+        android:textSize="13sp" />
 </RelativeLayout>

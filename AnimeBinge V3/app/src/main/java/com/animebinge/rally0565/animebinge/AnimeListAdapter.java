@@ -26,7 +26,8 @@ import java.util.ArrayList;
 public class AnimeListAdapter extends ArrayAdapter<AnimeShow> {
     private Context context;
     private int resourceID;
-    private ArrayList<AnimeShow> arAnime = new ArrayList<AnimeShow>();
+    private ArrayList<AnimeShow> arAnime;
+
 
     public AnimeListAdapter(Context context, int resourceID, ArrayList<AnimeShow> anime) {
         super(context, resourceID, anime);
@@ -43,27 +44,27 @@ public class AnimeListAdapter extends ArrayAdapter<AnimeShow> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View row = convertView;
         ViewHolder holder = new ViewHolder();
-        if(row == null) {
+        if(convertView == null) {
 
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.griditem_layout, null);
+            convertView = inflater.inflate(resourceID, parent, false);
 
-            holder.txtName = (TextView) row.findViewById(R.id.tvItemName);
-            holder.imgAnime = (ImageView) row.findViewById(R.id.imgImage);
-            row.setTag(holder);
+            holder.txtName = (TextView) convertView.findViewById(R.id.tvItemName);
+            holder.imgAnime = (ImageView) convertView.findViewById(R.id.imgImage);
+            convertView.setTag(holder);
+
+            //http://www.androidhub4you.com/2012/09/hello-friends-today-i-am-going-to-share.html
+            AnimeShow animeShow = arAnime.get(position);
+            holder.txtName.setText(animeShow.getName());
+            byte[] bImage = animeShow.getImage();
+            ByteArrayInputStream bImageStream = new ByteArrayInputStream(bImage);
+            Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
+            holder.imgAnime.setImageBitmap(bmImage);
         }
         else {
-            holder = (ViewHolder) row.getTag();
+            holder = (ViewHolder) convertView.getTag();
         }
-        //http://www.androidhub4you.com/2012/09/hello-friends-today-i-am-going-to-share.html
-        AnimeShow animeShow = arAnime.get(position);
-        holder.txtName.setText(animeShow.getName());
-        byte[] bImage = animeShow.getImage();
-        ByteArrayInputStream bImageStream = new ByteArrayInputStream(bImage);
-        Bitmap bmImage = BitmapFactory.decodeStream(bImageStream);
-        holder.imgAnime.setImageBitmap(bmImage);
-        return row;
+        return convertView;
     }
 }

@@ -39,7 +39,7 @@ public class loadAnimeTask extends AsyncTask<Void, Integer, ArrayList<AnimeShow>
             while (i < animeShows.size())
             {
                 try {
-                    wait(250);
+                    wait(400);
                     i++;
                     publishProgress(i);
                 } catch (InterruptedException e) {
